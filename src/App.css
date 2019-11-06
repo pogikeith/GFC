@@ -269,11 +269,11 @@ textarea{
 
 .icons {
   display: flex;
-  margin: 15px 95px 95px;
+  margin: 51px 15px 19px 10px;
   float: left;
   font-size: 3em;
   align-content: center;
-  padding: 4px;
+  padding: 1px 15px 1px 11px;
   color: rgb(47, 187, 206); 
 }
 
@@ -281,8 +281,8 @@ textarea{
   display:flex; 
   font-weight: bold;
   width: 20%; 
-  padding-top: 30px;
-  margin: 5px 95px 150px;
+  padding: 20px 1px 21px 20px;
+  margin: 51px 0px 11px;
   font-size: 15px;
   text-align: left;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -388,3 +388,4 @@ select {
   color: blue;
   font-size: 12px;
 }
+
