@@ -26,9 +26,9 @@ class Home extends React.Component {
                 href="./Contact"> Contact Us
               </a>
 
-            <div className="Button">
-              <a  className="Button"
-                href="./Book"><button> Book Consultation</button>
+            <div className="Button1">
+              <a  className="Button1"
+                href="./Book"><button1> Book Consultation</button1>
               </a>
             </div>  
             
@@ -43,9 +43,7 @@ class Home extends React.Component {
         <img src={Image} className="App-Image" alt="logo" />
       </div>
 
-      <div>          
-        <img src={Pic} className="App-Pic" alt="logo" />
-      </div>
+     
 
      <div className= "intro">
        Gluten Free Consult 
@@ -58,8 +56,15 @@ class Home extends React.Component {
        living with Celiac for almost 20 years and unlike most dieticians, we have actually tasted the food they eat and have navigated life post diagnosis. We know the feeling of helplessness and sometimes isolation people have 
        once diagnosed.  
        
-       <br/>
+       
      </div>  
+
+  
+     <div>          
+        <img src={Pic} className="App-Pic" alt="logo" />
+      </div>
+       
+     
 
     </div>
     );

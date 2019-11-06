@@ -8,6 +8,9 @@
     "@fortawesome/react-fontawesome": "^0.1.7",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-dropdown-date": "0.0.18",
+    "react-dropdown-timepicker": "^1.0.4",
+    "react-responsive-carousel": "^3.1.51",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },

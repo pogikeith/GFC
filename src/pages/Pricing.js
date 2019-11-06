@@ -26,9 +26,9 @@ class Pricing extends React.Component {
                 href="./Contact"> Contact Us
               </a>
            
-              <div className="Button">
-              <a  className="Button"
-                href="./Book"><button> Book Consultation</button>
+              <div className="Button1">
+              <a  className="Button1"
+                href="./Book"><button1> Book Consultation</button1>
               </a>
             </div>  
 

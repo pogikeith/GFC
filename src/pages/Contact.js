@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FontIcon } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesome } from "@fortawesome/free-solid-svg-icons";
+
     
 import Logo from './logo.png';
 import Image from '../images/solid.jpg';
@@ -30,33 +29,46 @@ class Contact extends React.Component {
                 href="./Contact"> Contact Us
               </a>
            
-              <div className="Button">
-              <a  className="Button"
-                href="./Book"><button> Book Consultation</button>
+              <div className="Button1">
+              <a  className="Button1"
+                href="./Book"><button1> Book Consultation</button1>
               </a>
             </div>  
-
-              
-        </div> 
-  
-        {/* <div className="bullet-point-group">
-            <div className="icons">
-              <FontAwesomeIcon icon="phone" />
-            </div>
-        </div>     */}
+             
+        </div>     
   
       </header>
+
+
       <div>          
         <img src={Image} className="App-Image" alt="logo" />
       </div>
 
-        <div>
-            <h2>Contact Us</h2>
-        </div>
+        
+      <div className="text-contact">
+          <p>Contact Us</p>
+     </div>
 
-            <div className="icons">
+        <div className="icons">
               <FontAwesomeIcon icon="phone" />
             </div>
+
+            <div className="text">Phone: 385.204.5049 
+            <b/>Toll Free: 866.341.8213</div>
+          
+
+            <div className="icons">
+              <FontAwesomeIcon icon="envelope" />
+            </div>
+            <div className="text">Email: contact@gfconsult.com</div>
+
+            
+            <div className="icons">
+              <FontAwesomeIcon icon="map-marked-alt" />
+            </div>
+
+            <div className="text">Address: Lehi, UT</div>
+
           
   </div>     
       );

@@ -10,10 +10,9 @@ import {
     faLock
   } from "@fortawesome/free-solid-svg-icons";
   import { library } from "@fortawesome/fontawesome-svg-core";
-  import { library } from "@fortawesome/fontawesome-svg-core";
-  import { library } from "@fortawesome/free-solid-svg-icons";
   
-  const Icons = () => {
+  
+  const icons = () => {
     return library.add(
       faTrash,
       faSignOutAlt,
@@ -27,4 +26,4 @@ import {
     );
   };
   
-  export default Icons;
+  export default icons;
