@@ -3,7 +3,7 @@ import Logo from './logo.png';
 import Image from '../images/solid.jpg';
 import Consult from '../images/consult.jpg';
 import DropdownDate from 'react-dropdown-date';
-import axios from "axios";
+import axios from "axios"
 
 //dropdown1
 const formatDate = (date) => {	// formats a JS date to 'yyyy-mm-dd'
@@ -46,8 +46,9 @@ class Book extends React.Component {
     //     })
     // }
 
-    handleSubmit= (event) => { 
-        axios.post("http://localhost:5000/guide", {
+    handleSubmit = (event) => {
+        event.preventDefault()
+        axios.post("https://gfcsite.herokuapp.com/guide", {
              firstname: this.state.firstname,
              lastname: this.state.lastname,
              email:this.state.email,
@@ -55,6 +56,8 @@ class Book extends React.Component {
              notes:this.state.notes,
              date:this.state.date
         })
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err))
     }
 
     // handleSubmit= (event) => { 
@@ -142,24 +145,108 @@ class Book extends React.Component {
        <br/>
      </div>  
 
-            <div className= "table">
+            <form className="table" onSubmit={this.handleSubmit} >
               
                 
                     <p>FIRST NAME:</p> <input name="firstname" onChange= {(e)=> this.setState({firstname: e.target.value})} type="text" placeholder="First Name" /> 
                     <p>LAST NAME:</p> <input name="lastname" onChange= {(e)=> this.setState({lastname: e.target.value})} type="text" placeholder="Last Name" /> 
                     <p>EMAIL:</p> <input name="email" onChange= {(e)=> this.setState({email: e.target.value})} type="text" placeholder="Email" /> 
                     <p>PHONE:</p> <input name="phone" onChange= {(e)=> this.setState({phone: e.target.value})} type="text" placeholder="Phone" /> 
-                    <p>NOTES TO STAFF:</p> <input name="notes" onChange= {(e)=> this.setState({notes: e.target.value})} type="text" placeholder="Notes" />
+
+                   
+                    <div className="dropmenu">
+                    <h2>Appt Day </h2>
+                                    <DropdownDate 
+                                        
+                                        startDate={                         // optional, if not provided 1900-01-01 is startDate
+                                            '2019-11-01'                    // 'yyyy-mm-dd' format only
+                                        }
+                                        endDate={                           // optional, if not provided current date is endDate
+                                            '2021-01-31'                    // 'yyyy-mm-dd' format only
+                                        }
+                                        selectedDate={                      // optional
+                                            this.state.selectedDate         // 'yyyy-mm-dd' format only
+                                        }
+                                        order={                             // optional
+                                            ['year', 'month', 'day']        // Order of the dropdowns
+                                        }
+                                        onMonthChange={(month) => {         // optional
+                                            console.log(month);
+                                        }}
+                                        onDayChange={(day) => {             // optional
+                                            console.log(day);
+                                        }}
+                                        onYearChange={(year) => {           // optional
+                                            console.log(year);
+                                        }}
+                                        onDateChange={(date) => {           // optional
+                                            console.log(date);
+                                            this.setState({ date: date, selectedDate: formatDate(date) });
+                                        }}
+                                        ids={                               // optional
+                                            {
+                                                year: 'select-year',
+                                                month: 'select-month',
+                                                day: 'select-day'
+                                            }
+                                        }
+                                        names={                             // optional
+                                            {
+                                                year: 'year',
+                                                month: 'month',
+                                                day: 'day'
+                                            }
+                                        }
+                                        classes={                           // optional
+                                            {
+                                                dateContainer: 'classes',
+                                                yearContainer: 'classes',
+                                                monthContainer: 'classes',
+                                                dayContainer: 'classes',
+                                                year: 'classes classes',
+                                                month: 'classes classes',
+                                                day: 'classes classes',
+                                                yearOptions: 'classes',
+                                                monthOptions: 'classes',
+                                                dayOptions: 'classes'
+                                            }
+                                        }
+                                        defaultValues={                     // optional
+                                            {
+                                                year: 'select year',
+                                                month: 'Select Month',
+                                                day: 'select day'
+                                            }
+                                        }
+                                        options={                           // optional
+                                            {
+                                                yearReverse: true,              // false by default
+                                                monthShort: true,               // false by default
+                                                monthCaps: true                 // false by default
+                                    }
+                                }
+                                
+
+                                
+                                DropdownDate/>
+       
+
+                </div>
+
+
+
+
+
+                    <p>REQUESTED TIME (AM or PM and Time Zone) and NOTES TO STAFF:</p> <input name="notes" onChange= {(e)=> this.setState({notes: e.target.value})} type="text" placeholder="Notes" />
                     {/* <p>BOOK DAY AND TIME:</p> <input onChange= {(e)=> this.setState({dayandtime: e.target.value})} type="text" placeholder="Enter Here" /> */}
 
-                    {/* <button onClick={(event) => this.handleSubmit(event)} className="dropbtn">Submit</button> */}
+                    <button type="submit" className="dropbtn">Submit</button>
 
-            </div>
+            </form>
             {/* //dropdown2 */}
 
 <div>
-    <div className="Booktime">
-        <h2>Book Day </h2>
+    
        
     
     {/* <div className="Booktime">
@@ -168,88 +255,12 @@ class Book extends React.Component {
 
    
 
-   <div className="dropmenu">
-        <DropdownDate 
-            
-            startDate={                         // optional, if not provided 1900-01-01 is startDate
-                '2019-11-01'                    // 'yyyy-mm-dd' format only
-            }
-            endDate={                           // optional, if not provided current date is endDate
-                '2021-01-31'                    // 'yyyy-mm-dd' format only
-            }
-            selectedDate={                      // optional
-                this.state.selectedDate         // 'yyyy-mm-dd' format only
-            }
-            order={                             // optional
-                ['year', 'month', 'day']        // Order of the dropdowns
-            }
-            onMonthChange={(month) => {         // optional
-                console.log(month);
-            }}
-            onDayChange={(day) => {             // optional
-                console.log(day);
-            }}
-            onYearChange={(year) => {           // optional
-                console.log(year);
-            }}
-            onDateChange={(date) => {           // optional
-                console.log(date);
-                this.setState({ date: date, selectedDate: formatDate(date) });
-            }}
-            ids={                               // optional
-                {
-                    year: 'select-year',
-                    month: 'select-month',
-                    day: 'select-day'
-                }
-            }
-            names={                             // optional
-                {
-                    year: 'year',
-                    month: 'month',
-                    day: 'day'
-                }
-            }
-            classes={                           // optional
-                {
-                    dateContainer: 'classes',
-                    yearContainer: 'classes',
-                    monthContainer: 'classes',
-                    dayContainer: 'classes',
-                    year: 'classes classes',
-                    month: 'classes classes',
-                    day: 'classes classes',
-                    yearOptions: 'classes',
-                    monthOptions: 'classes',
-                    dayOptions: 'classes'
-                }
-            }
-            defaultValues={                     // optional
-                {
-                    year: 'select year',
-                    month: 'Select Month',
-                    day: 'select day'
-                }
-            }
-            options={                           // optional
-                {
-                    yearReverse: true,              // false by default
-                    monthShort: true,               // false by default
-                    monthCaps: true                 // false by default
-        }
-    }
-    
-
-    
-    DropdownDate/>
-       
-
-    </div>
+  
  
+
 </div>
-</div>
-   
-<button onClick={(event) => this.handleSubmit(event)} className="dropbtn">Submit</button>
+{/*    
+<button onClick={(event) => this.handleSubmit(event)} className="dropbtn">Submit</button> */}
 
 {/* dropdown2 */}
              

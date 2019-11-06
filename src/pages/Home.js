@@ -3,7 +3,7 @@ import React from "react";
 
 import Logo from './logo.png';
 import Image from '../images/solid.jpg';
-import Pic from '../images/gluten.png';
+
 
 class Home extends React.Component {
     render(){
@@ -60,9 +60,7 @@ class Home extends React.Component {
      </div>  
 
   
-     <div>          
-        <img src={Pic} className="App-Pic" alt="logo" />
-      </div>
+     
        
      
 

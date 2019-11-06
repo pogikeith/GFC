@@ -310,11 +310,14 @@ input {
 }
 
 button {
+  display:flex; 
+  flex-direction: column-reverse;
+  height: 50px;
   align-content: center;
   align-items: center;
-  padding: 4px 5px; 
+  padding: 4px ; 
   width: 20%;
-  margin: 25px 10px; 
+  margin: 25px 10px 25px 25px; 
   
 }
 
@@ -323,7 +326,7 @@ button1 {
   align-items: center;
   padding: 4px 5px; 
   width: 20%;
-  margin: 25px 10px; 
+  margin: 25px 10px 25px; 
   
 }
 
@@ -339,23 +342,27 @@ select {
 
 .dropmenu {
   display: flex; 
+  flex-direction: row;
   width: 100px;
-  height: 500px;
+  height: 55px;
   flex-direction: row;
   margin: 1px;
-  border: 55px;
+  
   float: left; 
-  width: 21%;
+  width: 25%;
   color: blue;
   padding: 1px;
+  font-size: 12px;
+  
 }
 
 
 .Booktime {
   display: flex;
+ 
   margin: 100px 2px 2px 38px;
 
-  /* padding:73px 33px 5px 32px;  */
+  padding:5px 1px 5px 0px; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.15;
   color: blue;
