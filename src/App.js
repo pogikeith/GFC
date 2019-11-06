@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
@@ -26,6 +25,7 @@ class App extends Component {
           
 
           <Switch>
+            
             <Route exact path='/' component={Home}/>
             <Route path='/about' component={About}/>
             <Route path='/pricing' component={Pricing}/>

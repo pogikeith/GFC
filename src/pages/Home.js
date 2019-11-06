@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 import Logo from './logo.png';
 import Image from '../images/solid.jpg';
@@ -13,23 +13,23 @@ class Home extends React.Component {
             <img src={Logo} className="App-logo" alt="logo" />
               
             <div className="nav-link-wrapper">
-              <a href= "/" > Home
-              </a>
-  
-              <a href="./Pricing"> Pricing 
-              </a>
-  
-              <a href="./About"> About Us
-              </a>
-  
-              <a
-                href="./Contact"> Contact Us
-              </a>
-
-            <div className="Button1">
-              <a  className="Button1"
-                href="./Book"><button1> Book Consultation</button1>
-              </a>
+            <Link to = "/" > Home
+                  </Link>
+      
+                  <Link to ="/Pricing"> Pricing 
+                  </Link>
+      
+                  <Link to ="/About"> About Us
+                  </Link>
+      
+                  <Link
+                    to ="/Contact"> Contact Us
+                  </Link>
+           
+              <div className="Button1">
+              <Link  className="Button1"
+                to="/Book"><button1> Book Consultation</button1>
+              </Link>
             </div>  
             
          
