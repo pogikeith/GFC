@@ -3,7 +3,7 @@ import Logo from './logo.png';
 import Image from '../images/solid.jpg';
 import Consult from '../images/consult.jpg';
 import DropdownDate from 'react-dropdown-date';
-
+import axios from "axios";
 
 //dropdown1
 const formatDate = (date) => {	// formats a JS date to 'yyyy-mm-dd'
@@ -46,42 +46,46 @@ class Book extends React.Component {
     //     })
     // }
 
+    handleSubmit= (event) => { 
+        axios.post("http://localhost:5000/guide", {
+             firstname: this.state.firstname,
+             lastname: this.state.lastname,
+             email:this.state.email,
+             phone: this.state.phone,
+             notes:this.state.notes,
+             date:this.state.date
+        })
+    }
+
     // handleSubmit= (event) => { 
-    //     axios.post("URL....", {
-    //         firstname: this.state.firstname,
-    //         lastname: this.state.lastname
-    //     })
+    //     console.log('clicked')
+    //     event.preventDefault(); 
+    //     console.log (this.state.lastname)
     // }
 
-    handleSubmit= (event) => { 
-        console.log('clicked')
-        event.preventDefault(); 
-        console.log (this.state.lastname)
-    }
+    // handleSubmit= (event) => { 
+    //     console.log('clicked')
+    //     event.preventDefault(); 
+    //     console.log (this.state.email)
+    // }
 
-    handleSubmit= (event) => { 
-        console.log('clicked')
-        event.preventDefault(); 
-        console.log (this.state.email)
-    }
+    // handleSubmit= (event) => { 
+    //     console.log('clicked')
+    //     event.preventDefault(); 
+    //     console.log (this.state.phone)
+    // }
 
-    handleSubmit= (event) => { 
-        console.log('clicked')
-        event.preventDefault(); 
-        console.log (this.state.phone)
-    }
+    // handleSubmit= (event) => { 
+    //     console.log('clicked')
+    //     event.preventDefault(); 
+    //     console.log (this.state.notes)
+    // }
 
-    handleSubmit= (event) => { 
-        console.log('clicked')
-        event.preventDefault(); 
-        console.log (this.state.notes)
-    }
-
-    handleSubmit= (event) => { 
-        console.log('clicked')
-        event.preventDefault(); 
-        console.log (this.state.dayandtime)
-    }
+    // handleSubmit= (event) => { 
+    //     console.log('clicked')
+    //     event.preventDefault(); 
+    //     console.log (this.state.dayandtime)
+    // }
 
 
     
@@ -142,10 +146,10 @@ class Book extends React.Component {
               
                 
                     <p>FIRST NAME:</p> <input name="firstname" onChange= {(e)=> this.setState({firstname: e.target.value})} type="text" placeholder="First Name" /> 
-                    <p>LAST NAME:</p> <input onChange= {(e)=> this.setState({lastname: e.target.value})} type="text" placeholder="Last Name" /> 
-                    <p>EMAIL:</p> <input onChange= {(e)=> this.setState({email: e.target.value})} type="text" placeholder="Email" /> 
-                    <p>PHONE:</p> <input onChange= {(e)=> this.setState({phone: e.target.value})} type="text" placeholder="Phone" /> 
-                    <p>NOTES TO STAFF:</p> <input onChange= {(e)=> this.setState({notes: e.target.value})} type="text" placeholder="Notes" />
+                    <p>LAST NAME:</p> <input name="lastname" onChange= {(e)=> this.setState({lastname: e.target.value})} type="text" placeholder="Last Name" /> 
+                    <p>EMAIL:</p> <input name="email" onChange= {(e)=> this.setState({email: e.target.value})} type="text" placeholder="Email" /> 
+                    <p>PHONE:</p> <input name="phone" onChange= {(e)=> this.setState({phone: e.target.value})} type="text" placeholder="Phone" /> 
+                    <p>NOTES TO STAFF:</p> <input name="notes" onChange= {(e)=> this.setState({notes: e.target.value})} type="text" placeholder="Notes" />
                     {/* <p>BOOK DAY AND TIME:</p> <input onChange= {(e)=> this.setState({dayandtime: e.target.value})} type="text" placeholder="Enter Here" /> */}
 
                     {/* <button onClick={(event) => this.handleSubmit(event)} className="dropbtn">Submit</button> */}
