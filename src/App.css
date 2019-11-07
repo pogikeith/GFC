@@ -279,20 +279,20 @@ textarea{
 
 .icons {
   display: flex;
-  margin: 51px 15px 19px 10px;
+  margin: 2px 22px 2px 10px;
   float: left;
   font-size: 3em;
   align-content: center;
-  padding: 1px 15px 1px 11px;
+  padding: 5px 10px 0px 19px;
   color: rgb(47, 187, 206); 
 }
 
 .text {
   display:flex; 
   font-weight: bold;
-  width: 20%; 
-  padding: 20px 1px 21px 20px;
-  margin: 51px 0px 11px;
+  width: 22%; 
+  padding: 21px 1px 21px 25px;
+  margin: 2px 0px 4px 5px;
   font-size: 15px;
   text-align: left;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -398,6 +398,7 @@ select {
   color: blue;
   font-size: 12px;
 }
+
 
 @media(max-width: 650px) {
   .App {
