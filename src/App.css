@@ -331,7 +331,7 @@ button {
   
 }
 
-button1 {
+.button1 {
   align-content: center;
   align-items: center;
   padding: 4px 5px; 
@@ -399,12 +399,12 @@ select {
   font-size: 12px;
 }
 
-@media(max-width: 700px) {
+@media(max-width: 650px) {
   .App {
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-content: space-between;
-    padding: 185px 185px 185px 180px; 
-    margin: 185px 185px 185px 180px; 
+    padding: 1px 0px 1px 10px; 
+    margin: 3px 1px 0px 1px; 
     color: green; 
   }
 }
@@ -413,8 +413,8 @@ select {
   .nav-link-wrapper {
     flex-direction: column;
     
-    padding: 180px 150px 180px 180px; 
-    margin: 180px 180px 100px 190px; 
+    padding: 1px 0px 3px 7px; 
+    margin: 2px 1px 2px 7px; 
     
   }
 }
