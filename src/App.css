@@ -1,3 +1,13 @@
+.body {
+  margin: 0px;
+  padding: 0px; 
+}
+
+.App {
+  margin: 0px;
+  padding: 0px; 
+}
+
 
 
 .App-logo {
@@ -389,3 +399,22 @@ select {
   font-size: 12px;
 }
 
+@media(max-width: 700px) {
+  .App {
+    flex-direction: column;
+    align-content: space-between;
+    padding: 185px 185px 185px 180px; 
+    margin: 185px 185px 185px 180px; 
+    color: green; 
+  }
+}
+
+@media(max-width: 650px) {
+  .nav-link-wrapper {
+    flex-direction: column;
+    
+    padding: 180px 150px 180px 180px; 
+    margin: 180px 180px 100px 190px; 
+    
+  }
+}
