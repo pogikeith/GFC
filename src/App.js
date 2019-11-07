@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from "./pages/About";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import Confirm from "./pages/Confirm";
 import Book from "./pages/Book";
 import icons from "./helpers/icons";
 
@@ -31,6 +32,7 @@ class App extends Component {
             <Route path='/pricing' component={Pricing}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/book' component={Book}/>
+            <Route path='/confirm' component={Confirm}/>
 
           </Switch>
 

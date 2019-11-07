@@ -59,6 +59,7 @@ class Book extends React.Component {
         })
         .then(res => console.log(res.data))
         .catch(err => console.log(err))
+         this.props.history.push("/confirm")
     }
 
     // handleSubmit= (event) => { 
@@ -117,9 +118,9 @@ class Book extends React.Component {
                             to ="/Contact"> Contact Us
                         </Link>
            
-                <div className="Button1">
-                    <Link  className="Button1"
-                            to="/Book"><button1> Book Consultation</button1>
+                <div className="Button">
+                    <Link  className="Button"
+                            to="/Book"> Book Consultation
                     </Link>
             </div>  
     
@@ -241,7 +242,9 @@ class Book extends React.Component {
                     <p>REQUESTED TIME (AM or PM and Time Zone) and NOTES TO STAFF:</p> <input name="notes" onChange= {(e)=> this.setState({notes: e.target.value})} type="text" placeholder="Notes" />
                     {/* <p>BOOK DAY AND TIME:</p> <input onChange= {(e)=> this.setState({dayandtime: e.target.value})} type="text" placeholder="Enter Here" /> */}
 
-                    <button type="submit" className="dropbtn">Submit</button>
+                    <button type ="submit" className="dropbtn">Submit</button> 
+
+                   
 
             </form>
             {/* //dropdown2 */}

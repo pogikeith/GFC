@@ -72,18 +72,32 @@
 .App-About {
   display: flex; 
   float: left; 
-  height: 35%;
-  width: 35%; 
-  margin-right: -120px;
-  padding: 0px;
- 
+  height: 30%;
+  width: 30%; 
+  padding: 0px 0px 0px opx;
+  margin: -18px -3px -5px -5px; 
 }
 
 .About-ProfilePic {
   display: flex; 
   float: right; 
-  height: 19%;
-  width: 19%; 
+  height: 20%;
+  width: 20%; 
+  padding: 0px 0px 0px opx;
+  margin: -18px -3px -5px -5px;
+}
+
+.Confirm {
+  display: flex; 
+  padding: 10px 0px 50px 500px;
+  margin:  20px 50px 5px 50px;
+  
+}
+
+.Confirmtext {
+  display: flex; 
+  padding: 15px 0px 0px 320px;
+  margin:  20px 50px 5px 50px;
 }
 
 .Pricing-Image {
@@ -169,8 +183,8 @@ a {
 
 .about-intro {
   display:flex; 
-  padding: 10px;
-  margin: 2px;
+  padding: 10px 10px 2px 4px;
+  margin: 0px 0px 0px 0px;
   text-decoration: none;
   font-weight: bold;
   font-size: 22px;
@@ -180,10 +194,10 @@ a {
 
 .about-body {
   display:flex; 
-  padding: 8px;
-  margin: 0px;
+  padding: 7px;
+  margin: 2px;
   font-size: 16px;
-  justify-content: right;
+  
   text-align: left;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -279,20 +293,27 @@ textarea{
 
 .icons {
   display: flex;
-  margin: 2px 22px 2px 10px;
+  margin: 4px 22px 0px 11px;
   float: left;
   font-size: 3em;
   align-content: center;
-  padding: 5px 10px 0px 19px;
+  padding: 7px 10px 0px 19px;
   color: rgb(47, 187, 206); 
+}
+
+li {
+  display: flex;
+  height: 15px 10px 10px 10px;
+  margin: 1px;
+  padding: -10px;
 }
 
 .text {
   display:flex; 
   font-weight: bold;
-  width: 22%; 
-  padding: 21px 1px 21px 25px;
-  margin: 2px 0px 4px 5px;
+  width: 15%; 
+  padding: 0px 0px 20px 26px;
+  margin: 19px 0px 0px 0px;
   font-size: 15px;
   text-align: left;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -406,7 +427,7 @@ select {
     align-content: space-between;
     padding: 1px 0px 1px 10px; 
     margin: 3px 1px 0px 1px; 
-    color: green; 
+    color: rgb(15, 32, 15); 
   }
 }
 
@@ -419,3 +440,41 @@ select {
     
   }
 }
+
+@media(max-width: 650px) {
+  .icons {
+    
+    
+    padding: 1px 10px 0px 3px; 
+    margin: 1px 1px 1px 3px; 
+    
+  }
+}
+
+@media(max-width: 650px) {
+  .text {
+    
+    padding: 15px 0px 15px 19px; 
+    margin: 0px 0px 13px 0px; 
+    
+  }
+}
+
+@media(max-width: 650px) {
+  .Confirm {
+    
+    padding: 10px 0px 50px 100px;
+    margin:  20px 50px 5px 50px;
+    
+  }
+}
+
+@media(max-width: 650px) {
+  .Confirmtext{
+    
+    padding: 15px 0px 0px 55px;
+    margin:  20px 50px 5px 25px;
+    
+  }
+}
+

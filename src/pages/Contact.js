@@ -32,7 +32,7 @@ class Contact extends React.Component {
            
               <div className="Button1">
               <Link  className="Button1"
-                to="/Book"><button1> Book Consultation</button1>
+                to="/Book"> Book Consultation
               </Link>
             </div>  
              
@@ -54,8 +54,11 @@ class Contact extends React.Component {
               <FontAwesomeIcon icon="phone" />
             </div>
 
-            <div className="text">Phone: 385.204.5049 
-            <b/>Toll Free: 866.341.8213</div>
+            <div className="text"><ul>
+           <li>Phone: 385.204.5049</li>
+           <li>Toll Free: 866.341.8213</li>
+              </ul> 
+            </div> 
           
 
             <div className="icons">

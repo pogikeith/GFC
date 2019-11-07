@@ -30,7 +30,7 @@ class About extends React.Component {
            
               <div className="Button1">
               <Link  className="Button1"
-                to="/Book"><button1> Book Consultation</button1>
+                to="/Book">Book Consultation
               </Link>
              
             </div>  
