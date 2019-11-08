@@ -49,7 +49,7 @@ class Book extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        axios.post("https://gfcsite.herokuapp.com/guide", {
+        axios.post("https://gfcbackend.herokuapp.com/guide", {
              firstname: this.state.firstname,
              lastname: this.state.lastname,
              email:this.state.email,
