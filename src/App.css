@@ -96,6 +96,8 @@
 
 .Confirmtext {
   display: flex; 
+  flex-direction: column-reverse; 
+  width: 25px;
   padding: 15px 0px 0px 320px;
   margin:  20px 50px 5px 50px;
 }
@@ -303,9 +305,8 @@ textarea{
 
 li {
   display: flex;
-  height: 15px 10px 10px 10px;
-  margin: 1px;
-  padding: -10px;
+  margin: 0px 0px 0px -40px;
+  padding: 0px;
 }
 
 .text {
@@ -418,6 +419,16 @@ select {
   line-height: 1.15;
   color: blue;
   font-size: 12px;
+}
+
+a {
+  display: flex; 
+  margin: 25px 0px 25px 25px;
+  padding: 25px 3px 0px 25px;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  
 }
 
 
