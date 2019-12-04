@@ -299,7 +299,7 @@ textarea{
   float: left;
   font-size: 3em;
   align-content: center;
-  padding: 7px 10px 0px 19px;
+  padding: 11px 10px 0px 19px;
   color: rgb(47, 187, 206); 
 }
 
@@ -318,6 +318,18 @@ li {
   font-size: 15px;
   text-align: left;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text1 {
+  display:flex; 
+  font-weight: bold;
+  width: 15%; 
+  padding: 10px 0px 20px 21px;
+  margin: 19px 0px 0px 0px;
+  font-size: 15px;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .text-contact {

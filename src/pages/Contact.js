@@ -71,7 +71,7 @@ class Contact extends React.Component {
               <FontAwesomeIcon icon="map-marked-alt" />
             </div>
 
-            <div className="text">Address: Lehi, UT</div>
+            <div className="text1">Address: Lehi, UT</div>
 
           
   </div>     
