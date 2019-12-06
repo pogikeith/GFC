@@ -96,8 +96,6 @@
 
 .Confirmtext {
   display: flex; 
-  flex-direction: column-reverse; 
-  width: 25px;
   padding: 15px 0px 0px 320px;
   margin:  20px 50px 5px 50px;
 }
@@ -169,6 +167,7 @@ button:active {
 
 a:hover {
   background-color: rgb(157, 218, 236);
+  text-align: center;
   letter-spacing: 1.5px;
   text-decoration: none; 
   transition: 0.45s;
@@ -295,16 +294,17 @@ textarea{
 
 .icons {
   display: flex;
-  margin: 4px 22px 0px 11px;
+  margin: 4px 22px 0px 16px;
   float: left;
   font-size: 3em;
   align-content: center;
-  padding: 11px 10px 0px 19px;
+  padding: 7px 11px 0px 19px;
   color: rgb(47, 187, 206); 
 }
 
 li {
-  display: flex;
+  
+ display: flex;
   margin: 0px 0px 0px -40px;
   padding: 0px;
 }
@@ -313,23 +313,22 @@ li {
   display:flex; 
   font-weight: bold;
   width: 15%; 
-  padding: 0px 0px 20px 26px;
-  margin: 19px 0px 0px 0px;
+  padding: 10px 0px 18px 27px;
+  margin: 8px 0px 0px 0px;
   font-size: 15px;
   text-align: left;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.text1 {
+.text1{
   display:flex; 
   font-weight: bold;
   width: 15%; 
-  padding: 10px 0px 20px 21px;
-  margin: 19px 0px 0px 0px;
+  padding: 11px 0px 18px 20px;
+  margin: 8px 0px 0px 0px;
   font-size: 15px;
   text-align: left;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 .text-contact {
@@ -433,16 +432,6 @@ select {
   font-size: 12px;
 }
 
-a {
-  display: flex; 
-  margin: 25px 0px 25px 25px;
-  padding: 25px 3px 0px 25px;
-  flex-direction: column;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 22px;
-  
-}
-
 
 @media(max-width: 650px) {
   .App {
@@ -500,4 +489,5 @@ a {
     
   }
 }
+
 
